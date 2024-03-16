@@ -3,6 +3,7 @@
   --text-color: #6e7b92;
   --border-color: rgba(163, 162, 162, 0.3);
   --text-highlight-color: #006ae4;
+  --text-hover-color: #328ef8;
   --border: 0.5px solid var(--border-color);
 }
 
@@ -26,6 +27,7 @@ nav {
   height: 7.5vh;
   border-bottom: var(--border);
   justify-content: space-between;
+  position: sticky;
 }
 
 nav > .left,
@@ -87,6 +89,10 @@ nav > .left > .option > span {
   cursor: pointer;
 }
 
+nav > .left > .option > span:hover {
+  color: var(--text-hover-color);
+}
+
 nav > .left > .option > .active {
   border-bottom: 2px solid var(--text-highlight-color);
   color: var(--text-highlight-color);
@@ -107,12 +113,13 @@ nav > .right > .abby-gartner > span {
   color: #889fb879;
 }
 
-/******************* Header *****************/
+/********************** Header ***********************/
 
 header {
   display: flex;
   flex-direction: column;
-  height: 15vh;
+  height: 17vh;
+  position: sticky;
 }
 
 header > .details {
@@ -124,37 +131,40 @@ header > .details {
   border-bottom: var(--border);
 }
 
-header > .details > .right {
+header > .details > .left {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-header > .details > .right > #back_button {
+header > .details > .left > #back_button {
   background-color: #e3effc;
   border: 2px solid #bcdcff;
-  font-size: calc(var(--font-size) * 1.7);
+  font-size: calc(var(--font-size) * 1.4);
   padding: 0.5rem 0.8rem;
   border-radius: 5px;
   color: var(--text-highlight-color);
+  cursor: pointer;
 }
 
-header > .details > .right > .directory {
+header > .details > .left > .directory {
   font-size: calc(var(--font-size) * 2);
   color: black;
   font-weight: bold;
+  cursor: pointer;
 }
 
-header > .details > .right > .directory > span {
+header > .details > .left > .directory > span {
   color: var(--border-color);
   font-weight: 400;
+  cursor: default;
 }
 
-header > .details > .left {
+header > .details > .right {
   display: flex;
 }
 
-header > .details > .left > img {
+header > .details > .right > img {
   border-radius: 50%;
   height: 2.5rem;
   width: 2.5rem;
@@ -162,19 +172,81 @@ header > .details > .left > img {
   object-position: center;
   margin-left: -0.5rem;
   border: 2px solid white;
+  cursor: pointer;
 }
 
-header > .details > .left > img:first-child {
+header > .details > .right > img:first-child {
   z-index: 5;
 }
 
-header > .details > .left > img:nth-child(2) {
+header > .details > .right > img:nth-child(2) {
   z-index: 4;
 }
 
 header > .options {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
-  padding: 1rem 1.5rem;
+  height: 7vh;
+  padding: 0 1.5rem;
+  border-bottom: var(--border);
+}
+
+header > .options > .left {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  height: 100%;
+}
+
+header > .options > .left > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+header > .options > .left > span:hover {
+  color: var(--text-hover-color);
+}
+
+header > .options > .left > .active {
+  border-bottom: 2px solid var(--text-highlight-color);
+  color: var(--text-highlight-color);
+}
+
+header > .options > .right {
+  display: flex;
+  align-items: center;
+}
+
+header > .options > .right > .mark-project-complete-container > label {
+  background-color: #e8e9ee;
+  padding: 0.3rem 0.7rem;
+  font-size: calc(var(--font-size) * 0.9);
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > .options > .right > .mark-project-complete-container > label > span {
+  color: inherit;
+}
+
+header
+  > .options
+  > .right
+  > .mark-project-complete-container:has(input:checked)
+  > label {
+  background-color: #e9f9ed;
+  color: #56b76b;
+  box-shadow: #56b76b 0px 1px 1px, #56b76b 0px 0px 0px 1px;
+}
+
+header > .options > .right > .mark-project-complete-container > input {
+  position: absolute;
+  width: 0;
 }

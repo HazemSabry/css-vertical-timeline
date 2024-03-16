@@ -42,19 +42,31 @@
     </nav>
     <header>
       <div class="details">
-        <div class="right">
+        <div class="left">
           <button id="back_button">🡨</button>
           <div class="directory">Main Database <span>/</span> test_data</div>
         </div>
-        <div class="left">
+        <div class="right">
           <img src="./assets/person1.jpg" alt="Person1" />
           <img src="./assets/person2.jpg" alt="Person2" />
           <img src="./assets/person3.jpg" alt="Person3" />
         </div>
       </div>
       <div class="options">
-        <div class="right"></div>
-        <div class="left"></div>
+        <div class="left">
+          <span id="activity" class="active">Activity</span>
+          <span id="tables">Tables</span>
+          <span id="settings">Settings</span>
+        </div>
+        <div class="right">
+          <div class="mark-project-complete-container">
+            <label for="mark-project-complete-checkbox">
+              Mark Project Complete
+              <span class="material-symbols-outlined"> check_circle </span>
+            </label>
+            <input type="checkbox" id="mark-project-complete-checkbox" />
+          </div>
+        </div>
       </div>
     </header>
     <aside></aside>
