@@ -17,62 +17,136 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="left">
-        <div class="logo">
-          <img src="./assets/logo.png" alt="logo" />
-          <span>Entries</span>
-        </div>
-        <div class="charity">
-          charity: water
-          <span class="material-symbols-outlined"> keyboard_arrow_down </span>
-        </div>
-        <div class="option">
-          <span id="projects">Projects</span>
-          <span id="databases" class="active">Databases</span>
-          <span id="admin">Admin</span>
-        </div>
-      </div>
-      <div class="right">
-        <div class="abby-gartner">
-          Abby Gartner
-          <span class="material-symbols-outlined"> keyboard_arrow_down </span>
-        </div>
-      </div>
-    </nav>
-    <header>
-      <div class="details">
+    <div class="top-container">
+      <nav>
         <div class="left">
-          <button id="back_button">🡨</button>
-          <div class="directory">Main Database <span>/</span> test_data</div>
-        </div>
-        <div class="right">
-          <img src="./assets/person1.jpg" alt="Person1" />
-          <img src="./assets/person2.jpg" alt="Person2" />
-          <img src="./assets/person3.jpg" alt="Person3" />
-        </div>
-      </div>
-      <div class="options">
-        <div class="left">
-          <span id="activity" class="active">Activity</span>
-          <span id="tables">Tables</span>
-          <span id="settings">Settings</span>
-        </div>
-        <div class="right">
-          <div class="mark-project-complete-container">
-            <label for="mark-project-complete-checkbox">
-              Mark Project Complete
-              <span class="material-symbols-outlined"> check_circle </span>
-            </label>
-            <input type="checkbox" id="mark-project-complete-checkbox" />
+          <div class="logo">
+            <img src="./assets/logo.png" alt="logo" />
+            <span>Entries</span>
+          </div>
+          <div class="charity">
+            charity: water
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </div>
+          <div class="option">
+            <span id="projects">Projects</span>
+            <span id="databases" class="active">Databases</span>
+            <span id="admin">Admin</span>
           </div>
         </div>
-      </div>
-    </header>
-    <aside></aside>
-    <article>
-      <section class="today"></section>
-      <section class="yesterday"></section>
-    </article>
+        <div class="right">
+          <div class="abby-gartner">
+            Abby Gartner
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </div>
+        </div>
+      </nav>
+      <header>
+        <div class="details">
+          <div class="left">
+            <button id="back_button">🡨</button>
+            <div class="directory">Main Database <span>/</span> test_data</div>
+          </div>
+          <div class="right">
+            <img src="./assets/person1.jpg" alt="Person1" />
+            <img src="./assets/person2.jpg" alt="Person2" />
+            <img src="./assets/person3.jpg" alt="Person3" />
+          </div>
+        </div>
+        <div class="options">
+          <div class="left">
+            <span id="activity" class="active">Activity</span>
+            <span id="tables">Tables</span>
+            <span id="settings">Settings</span>
+          </div>
+          <div class="right">
+            <div class="mark-project-complete-container">
+              <label for="mark-project-complete-checkbox">
+                Mark Project Complete
+                <span class="material-symbols-outlined"> check_circle </span>
+              </label>
+              <input type="checkbox" id="mark-project-complete-checkbox" />
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="content-container">
+      <aside>
+        <h4>Filter Activity</h4>
+        <section>
+          <h5>TYPE</h5>
+          <div class="checkbox-container">
+            <input type="checkbox" id="flags" />
+            <label for="flags">Flags</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="mappings" />
+            <label for="mappings">Mappings</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="queries" />
+            <label for="queries">Queries</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="rules" />
+            <label for="rules">Rules</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="uploaded-files" />
+            <label for="uploaded-files">Uploaded Files</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="comments" />
+            <label for="comments">Comments</label>
+          </div>
+        </section>
+        <section>
+          <h5>CONTRIBUTOR</h5>
+          <div class="checkbox-container">
+            <input type="checkbox" id="mark-grummond" />
+            <label for="mark-grummond">Mark Grummond</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="kayla-machelimore" />
+            <label for="kayla-machelimore">Kayla Machelimore</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="casey" />
+            <label for="casey">Casey</label>
+          </div>
+        </section>
+        <section>
+          <h5>TABLE</h5>
+          <div class="checkbox-container">
+            <input type="checkbox" id="tablenumber1" />
+            <label for="tablenumber1">Tablenumber1</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="secondtable" />
+            <label for="secondtable">Secondtable</label>
+          </div>
+        </section>
+      </aside>
+      <article>
+        <section id="today">
+          <div class="title">
+            <h4>Today</h4>
+            <span id="date">Tuesday, March 11, 2024</span>
+          </div>
+          <div class="update-news">
+            <img src="./assets/person3.jpg" alt="person3" />
+            <div class="message-container">
+              <div class="message-title">
+                Kayla flagged
+                <span class="highlit-text">customer_id_update</span>
+                <span class="destination">Secondtable</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="yesterday"></section>
+      </article>
+    </div>
   </body>
 </html>
