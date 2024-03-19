@@ -307,6 +307,8 @@ body {
   border-radius: 5px;
   background-color: white;
   min-width: 17vw;
+  height: fit-content;
+  position: fixed;
 }
 
 .content-container > aside > section {
@@ -348,6 +350,7 @@ label {
 .content-container > article {
   padding: 0 3rem;
   width: 100%;
+  margin-left: 17vw;
 }
 
 .content-container > article > section > .title {
@@ -454,11 +457,46 @@ label {
   > .message-container
   > .message-title
   > .content
+  > .type.material-symbols-outlined {
+  font-size: calc(var(--font-size) * 1.2);
+  margin-top: 0;
+}
+
+.content-container
+  > article
+  > section
+  > .update-news
+  > .message-container
+  > .message-title
+  > .content
   > .highlight-text {
-  color: var(--text-highlight-color);
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  font-weight: 800;
+}
+
+.content-container
+  > article
+  > section
+  > .update-news
+  > .message-container
+  > .message-title
+  > .content
+  > .highlight-text:hover {
+  color: var(--text-highlight-color);
+}
+
+.content-container
+  > article
+  > section
+  > .update-news
+  > .message-container
+  > .message-title
+  > .content
+  > .arrow {
+  opacity: 0.8;
+  font-size: calc(var(--font-size) * 1.5);
 }
 
 .content-container
@@ -472,13 +510,14 @@ label {
   content: attr(hover-note);
   position: absolute;
   top: -1.8rem;
-  left: 1.5rem;
+  left: 0;
   background-color: #31373d;
   color: #fff;
   padding: 0.2rem 0.5rem;
   font-size: calc(var(--font-size) * 0.9);
   border-radius: 2px;
   opacity: 0.8;
+  white-space: nowrap;
 }
 
 .content-container
@@ -495,7 +534,7 @@ label {
   border-top: 5px solid #31373d;
   position: absolute;
   top: -0.3rem;
-  left: 4rem;
+  left: 2.5rem;
   opacity: 0.8;
 }
 
@@ -525,4 +564,18 @@ label {
   font-size: calc(var(--font-size) * 0.95);
   opacity: 0.8;
   font-weight: 400;
+}
+
+.content-container
+  > article
+  > section
+  > .update-news
+  > .message-container
+  > .message-content {
+  background-color: var(--page-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 0.5rem;
 }
